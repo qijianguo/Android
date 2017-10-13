@@ -6,7 +6,7 @@ import android.view.View;
 import com.learning.util.ToastUtil;
 
 /**
- * <页面基础公共功能实现>
+ * <页面基础公共功能实现: 页面交互的的具体实现>
  *
  * @author
  * @version
@@ -28,21 +28,17 @@ public class PresentationLayerFuncHelper implements PresentationLayerFunc {
 
     @Override
     public void showProgressDialog() {
-
     }
 
     @Override
     public void hideProgressDialog() {
-
     }
 
     @Override
     public void showSoftKeyboard(View focusView) {
-
     }
 
     @Override
     public void hideSoftKeyboard() {
-
     }
 }

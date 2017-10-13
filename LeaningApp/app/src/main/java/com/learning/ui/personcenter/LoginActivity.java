@@ -1,6 +1,7 @@
 package com.learning.ui.personcenter;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,6 +64,7 @@ public class LoginActivity extends BaseActivity implements IUserLoginView {
     }
 
     @Override
+    // TODO: 接收通知
     public void onEventMainThread(Event event) {
         super.onEventMainThread(event);
         switch (event){
@@ -77,6 +79,8 @@ public class LoginActivity extends BaseActivity implements IUserLoginView {
         switch (v.getId()) {
             case R.id.login:
                 //13914786934   123456  可以登录
+                Log.d(TAG, "onClick: 点击登录了!用户名是:" +  userName.getText().toString());
+                // 到presenter处理逻辑
                 mUserLoginPresenter.login(userName.getText().toString(), password.getText().toString());
                 break;
         }
@@ -108,4 +112,5 @@ public class LoginActivity extends BaseActivity implements IUserLoginView {
     public void hideLoading() {
 
     }
+
 }

@@ -13,7 +13,7 @@ import com.learning.capabilities.http.Param;
 import com.learning.constant.URLUtil;
 
 /**
- * <功能详细描述>
+ * <功能详细描述: 1. 业务处理 2. 通知页面数据刷新>
  *
  * @author
  * @version
@@ -31,8 +31,8 @@ public class LoginPresenter extends BasePresenter<IUserLoginView> {
         mvpView.showLoading();
         SecurityManager securityManager = BridgeFactory.getBridge(Bridges.SECURITY);
         OkHttpManager httpManager = BridgeFactory.getBridge(Bridges.HTTP);
-
-        httpManager.requestAsyncPostByTag(URLUtil.USER_LOGIN, getName(), new ITRequestResult<LoginResp>() {
+        mvpView.onSuccess();
+        /*httpManager.requestAsyncPostByTag(URLUtil.USER_LOGIN, getName(), new ITRequestResult<LoginResp>() {
                     @Override
                     public void onCompleted() {
                         mvpView.hideLoading();
@@ -51,6 +51,6 @@ public class LoginPresenter extends BasePresenter<IUserLoginView> {
                     }
 
                 }, LoginResp.class, new Param("username", useName),
-                new Param("pas", securityManager.get32MD5Str(password)));
+                new Param("pas", securityManager.get32MD5Str(password)));*/
     }
 }

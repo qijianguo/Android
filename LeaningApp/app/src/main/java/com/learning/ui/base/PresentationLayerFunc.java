@@ -3,7 +3,7 @@ package com.learning.ui.base;
 import android.view.View;
 
 /**
- * <页面基础公共功能抽象>
+ * <页面交互封装>
  *
  * @author
  * @version

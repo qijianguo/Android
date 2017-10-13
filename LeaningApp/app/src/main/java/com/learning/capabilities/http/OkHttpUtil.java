@@ -427,6 +427,12 @@ public class OkHttpUtil {
     /*************************************************************
      * 回调方法
      *********************************************************/
+
+    /**
+     * 集中统一处理网络层异常码然后返回到UI层。
+     * 集中统一处理网络层正常情况，通过json库，把网络返回解析成java model返回给UI层。
+     * @param <T>
+     */
     class TRequestCallBack<T> implements Callback {
 
         private ITRequestResult<T> mITRequestResult;

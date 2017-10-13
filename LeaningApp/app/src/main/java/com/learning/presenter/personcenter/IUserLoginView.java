@@ -3,7 +3,7 @@ package com.learning.presenter.personcenter;
 import com.learning.presenter.IMvpView;
 
 /**
- * <功能详细描述>
+ * <Presenter逻辑与View视图交互的扩展接口>
  *
  * @author
  * @version
@@ -11,5 +11,10 @@ import com.learning.presenter.IMvpView;
  * @since
  */
 public interface IUserLoginView extends IMvpView {
+
+    /**
+     * 登录成功后清除输入框内容
+     */
     void clearEditContent();
+
 }

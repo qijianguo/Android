@@ -10,22 +10,21 @@ import android.widget.TextView;
 
 import com.learning.BaseApplication;
 import com.learning.R;
-import com.learning.presenter.BasePresenter;
-import com.learning.presenter.IMvpView;
 import com.learning.bridge.BridgeFactory;
 import com.learning.bridge.Bridges;
 import com.learning.bridge.http.OkHttpManager;
 import com.learning.constant.Event;
+import com.learning.presenter.BasePresenter;
+import com.learning.presenter.IMvpView;
 
 import de.greenrobot.event.EventBus;
 
 /**
  * <基础activity>
  *
+ *
  * @author
- * @version
  * @see
- * @since
  */
 public abstract class BaseActivity extends Activity implements CreateInit, PublishActivityCallBack, PresentationLayerFunc, IMvpView, OnClickListener {
 
@@ -48,6 +47,7 @@ public abstract class BaseActivity extends Activity implements CreateInit, Publi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // 页面交互初始化
         presentationLayerFuncHelper = new PresentationLayerFuncHelper(this);
 
         initViews();
@@ -80,6 +80,7 @@ public abstract class BaseActivity extends Activity implements CreateInit, Publi
      * EventBus使用: 在接受消息的页面实现此方法
      * 接收页面的Event的值跟EventBus.getDefault().post(Event.IMAGE_LOADER_SUCCESS);的发送的值相同，
      * 则此页面就接收到通知，如果多个页面都有同一个event，则这几个页面都可以收到通知。
+     *
      * @param event
      */
     public void onEventMainThread(Event event) {

@@ -14,11 +14,11 @@ public class URLUtil {
     /**
      * 服务器地址
      */
-    public static final String SERVER = "http://hilltest.top/";
+    public static final String SERVER = "http://localhost:8080/";
 
     /**
      * 用户登陆
      */
-    public static final String USER_LOGIN = SERVER+"login.do";
+    public static final String USER_LOGIN = SERVER+"login";
 
 }

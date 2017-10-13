@@ -22,7 +22,7 @@ public class Param {
         this.value = value + "";
     }
 
-    String key;
+    public String key;
 
-    String value;
+    public String value;
 }

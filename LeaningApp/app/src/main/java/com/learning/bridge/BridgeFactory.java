@@ -12,6 +12,9 @@ import java.util.HashMap;
 
 /**
  * <中间连接层>
+ * 用来统一管理基础功能,类似本地服务的实现原理
+ * BridgeFactory里面实现了文件，网络，数据库，安全等等管理类的实现，并保存了各类管理类的引用。
+ * 业务层或者上层调用底层实现时，一律通过BridgeFactory去访问，而不是直接的调用。
  *
  * @author
  * @version
