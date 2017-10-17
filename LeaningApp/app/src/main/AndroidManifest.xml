@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.personcenter.HomeActivity" />
+        <activity android:name=".ui.noise.NoiseActivity"></activity>
     </application>
 
 </manifest>

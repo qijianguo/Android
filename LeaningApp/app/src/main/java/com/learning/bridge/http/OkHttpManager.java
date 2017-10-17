@@ -47,7 +47,11 @@ public class OkHttpManager implements BridgeLifeCycleListener {
      * @param params          请求参数
      * @param <T>             泛型模板
      */
-    public <T> void requestAsyncGetByTag(String url, String activityName, ITRequestResult<T> iTRequestResult, Class<T> clazz, Param... params) {
+    public <T> void requestAsyncGetByTag(String url,
+                                         String activityName,
+                                         ITRequestResult<T> iTRequestResult,
+                                         Class<T> clazz,
+                                         Param... params) {
         OkHttpUtil.getInstance().requestAsyncGetEnqueueByTag(url, activityName, iTRequestResult, clazz, params);
     }
 

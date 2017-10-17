@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_picture_3x"
+    android:orientation="vertical">
 
     <include layout="@layout/common_title"/>
 
-    <ImageButton
-        android:id="@+id/image"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"/>
+    <LinearLayout android:layout_height="100dp"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/chongqin_group_layout2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+            <Button android:layout_width="205dp"
+                android:layout_height="100dp"
+                android:background="@drawable/water_3x"
+                android:id="@+id/bt_main_water"/>
+            <Button android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/sewage_3x"
+                android:id="@+id/bt_main_wushuichulichang"/>
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/back"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginTop="80dp"
-        android:text="返回"/>
-</LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="205dp"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/chongqin_group_layout1"
+        android:layout_above="@id/chongqin_group_layout2"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/bt_main_noise"
+                android:layout_width="100dp"
+                android:layout_height="205dp"
+                android:background="@drawable/noise_3x" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/bt_main_dust"
+                    android:layout_width="205dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/dust_3x" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/bt_main_air_quality"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/air_quality_3x" />
+
+                    <Button
+                        android:id="@+id/bt_main_pollution_sources"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/pollution_sources_3x" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
