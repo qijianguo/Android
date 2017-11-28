@@ -1,7 +1,7 @@
 package com.learning.ui.base;
 
 /**
- * <公共方法抽象: 页面的初始化>
+ * 页面的初始化
  *
  * @author
  * @version

@@ -1,16 +1,16 @@
 package com.learning.presenter.personcenter;
 
 import com.learning.bean.home.LoginResp;
-import com.learning.presenter.BasePresenter;
-import com.learning.bridge.BridgeFactory;
-import com.learning.bridge.Bridges;
 import com.learning.bridge.cache.sharePref.EBSharedPrefManager;
 import com.learning.bridge.cache.sharePref.EBSharedPrefUser;
-import com.learning.bridge.http.OkHttpManager;
-import com.learning.bridge.security.SecurityManager;
 import com.learning.capabilities.http.ITRequestResult;
 import com.learning.capabilities.http.Param;
 import com.learning.constant.URLUtil;
+import com.learning.presenter.BasePresenter;
+import com.learning.bridge.BridgeFactory;
+import com.learning.bridge.Bridges;
+import com.learning.bridge.http.OkHttpManager;
+import com.learning.bridge.security.SecurityManager;
 
 /**
  * <功能详细描述: 1. 业务处理 2. 通知页面数据刷新>
@@ -20,7 +20,7 @@ import com.learning.constant.URLUtil;
  * @see
  * @since
  */
-public class LoginPresenter extends BasePresenter<IUserLoginView> {
+public class LoginPresenter extends BasePresenter<ILoginView> {
 
     public LoginPresenter() {
 

@@ -21,6 +21,4 @@ public class URLUtil {
      */
     public static final String USER_LOGIN = SERVER+"login";
 
-    public static final String NOISE_LIST = SERVER + "noise/list";
-
 }

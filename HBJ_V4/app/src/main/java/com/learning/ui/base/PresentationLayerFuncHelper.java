@@ -6,7 +6,7 @@ import android.view.View;
 import com.learning.util.ToastUtil;
 
 /**
- * <页面基础公共功能实现: 页面交互的的具体实现>
+ * PresentationLayerFunc的具体实现, 页面交互的的具体实现
  *
  * @author
  * @version

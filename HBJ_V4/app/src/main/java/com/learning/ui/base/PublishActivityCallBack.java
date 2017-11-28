@@ -3,7 +3,7 @@ package com.learning.ui.base;
 import android.os.Bundle;
 
 /**
- * <页面跳转封装>
+ * 页面跳转封装
  *
  * @author
  * @version

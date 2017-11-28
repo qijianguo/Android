@@ -20,7 +20,7 @@ import com.learning.presenter.IMvpView;
 import de.greenrobot.event.EventBus;
 
 /**
- * <基础activity>
+ * 基础activity
  *
  *
  * @author

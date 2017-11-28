@@ -1,70 +1,61 @@
 package com.learning.ui.personcenter;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.learning.R;
 import com.learning.constant.Event;
-import com.learning.presenter.home.HomePresenter;
-import com.learning.presenter.home.IHomeView;
-import com.learning.presenter.noise.INoiseView;
-import com.learning.presenter.noise.NoisePresenter;
 import com.learning.ui.base.BaseActivity;
-import com.learning.ui.noise.NoiseActivity;
-import com.learning.util.ToastUtil;
+import com.learning.util.DensityUtil;
+import com.squareup.picasso.Picasso;
 
-public class HomeActivity extends BaseActivity implements IHomeView {
-    private static final String TAG = "HomeActivity";
-    /** 噪声 */
-    private Button noise_button;
+import de.greenrobot.event.EventBus;
 
-    private NoisePresenter noisePresenter;
-    private HomePresenter homePresenter;
+public class HomeActivity extends BaseActivity{
+    /**
+     * 返回
+     */
+    private Button back;
 
-    // 模块id
-    private int checked_R_Id = 0;
-
+    /**
+     * 图片
+     */
+    private ImageButton image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.home_activity);
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate: ");
-        presenter = homePresenter = new HomePresenter();
-        homePresenter.attachView(this);
     }
 
     @Override
     public void initViews() {
-        noise_button = findViewById(R.id.bt_main_noise);
+        back = (Button) findViewById(R.id.back);
+        image = (ImageButton) findViewById(R.id.image);
     }
 
     @Override
     public void initListeners() {
-        Log.d(TAG, "initListeners: ");
-         noise_button.setOnClickListener(this);
+        back.setOnClickListener(this);
     }
 
     @Override
     public void initData() {
-        Log.d(TAG, "initData: ");
+        Picasso.with(this).load("http://i.imgur.com/DvpvklR.png").resize(DensityUtil.dip2px(this,200), DensityUtil.dip2px(this,200)).centerCrop().into(image);
+        EventBus.getDefault().post(Event.IMAGE_LOADER_SUCCESS);
     }
 
     @Override
     public void onEventMainThread(Event event) {
-        Log.d(TAG, "onEventMainThread: ");
         super.onEventMainThread(event);
     }
 
     @Override
     public void onClick(View v) {
-        Log.d(TAG, "onClick: ");
-        checked_R_Id = v.getId();
-        homePresenter.getHomeData();
         switch (v.getId()) {
-            case R.id.bt_main_noise:
-                ToastUtil.makeText(this, "点击了噪声模块");
+            case R.id.back:
+                finish();
                 break;
         }
         super.onClick(v);
@@ -73,32 +64,26 @@ public class HomeActivity extends BaseActivity implements IHomeView {
     @Override
     public void setHeader() {
         super.setHeader();
-        // title.setText("环保千里眼");
+        title.setText("主页");
     }
 
     @Override
     public void onError(String errorMsg, String code) {
-        Log.d(TAG, "onError: ");
+
     }
 
     @Override
     public void onSuccess() {
-        Log.d(TAG, "onSuccess: ");
-        switch (checked_R_Id) {
-            case R.id.bt_main_noise:
-                startActivity(NoiseActivity.class, null);
-                break;
 
-        }
     }
 
     @Override
     public void showLoading() {
-        Log.d(TAG, "showLoading: ");
+
     }
 
     @Override
     public void hideLoading() {
-        Log.d(TAG, "hideLoading: ");
+
     }
 }
