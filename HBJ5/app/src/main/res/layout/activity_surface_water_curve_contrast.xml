@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="@dimen/tight_height_size"
+        android:background="@color/icon_blue"
+        android:orientation="horizontal">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="left"
+            android:id="@+id/dbsqxdb_goback"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/qxdb"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_tab_font_size"/>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="right"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/icon_blue"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    
+    <RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/surface_water_curve_contrast_radio_group" android:background="@drawable/maintab_toolbar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton  android:id="@+id/surface_water_curve_contrast1" android:layout_marginTop="2.0dip" android:text="总磷" style="@style/suface_water_tab_top" android:checked="true"/>
+        <RadioButton  android:id="@+id/surface_water_curve_contrast2" android:layout_marginTop="2.0dip" android:text="总氮" style="@style/suface_water_tab_top"/>
+        <RadioButton  android:id="@+id/surface_water_curve_contrast3" android:layout_marginTop="2.0dip" android:text="氨氮" style="@style/suface_water_tab_top"/>
+        <RadioButton  android:id="@+id/surface_water_curve_contrast4" android:layout_marginTop="2.0dip" android:text="浊度" style="@style/suface_water_tab_top"/>
+        <RadioButton  android:id="@+id/surface_water_curve_contrast5" android:layout_marginTop="2.0dip" android:text="高锰酸盐" style="@style/suface_water_tab_top"/>
+        <RadioButton  android:id="@+id/surface_water_curve_contrast6" android:layout_marginTop="2.0dip" android:text="PH值" style="@style/suface_water_tab_top"/>
+    </RadioGroup>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/dbsqxdb_rank_layout"/>
+
+</LinearLayout>

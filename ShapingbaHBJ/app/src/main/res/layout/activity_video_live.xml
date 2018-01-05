@@ -1,0 +1,172 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".LiveActivity" >
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="@dimen/tight_height_size"
+        android:background="@color/icon_blue"
+        android:orientation="horizontal">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="left"
+            android:id="@+id/live_goback1"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/shipinzhibo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_tab_font_size"/>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="right"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/icon_blue"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+    
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        
+    <RelativeLayout
+        android:id="@+id/SurfaceViewLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ControlLayout1"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="6dp" 
+        android:layout_alignParentTop="true"
+        >
+
+        <SurfaceView
+            android:id="@+id/surfaceView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <ProgressBar
+            android:id="@+id/liveProgressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ControlLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+		<!--  
+        <Button
+            android:id="@+id/liveStartBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textSize="@dimen/live_button_font_size"
+            android:text="播放" />
+
+        <Button
+            android:id="@+id/liveStopBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textSize="@dimen/live_button_font_size"
+            android:text="停止" />
+		-->
+		
+		<Button
+            android:id="@+id/start_ctrl1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/live_button_font_size"
+            android:text="@string/start_ctrl" />
+
+        <Button
+            android:id="@+id/stop_ctrl1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/live_button_font_size"
+            android:text="@string/stop_ctrl" />
+            
+        <Button
+            android:id="@+id/liveCaptureBtn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textSize="@dimen/live_button_font_size"
+            android:text="抓拍" />
+
+        <!--
+        <Button
+            android:id="@+id/liveRecordBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textSize="@dimen/live_button_font_size"
+            android:text="录像" />
+
+        <Button
+            android:id="@+id/liveAudioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textSize="@dimen/live_button_font_size"
+            android:text="音频" />
+        -->
+    </LinearLayout>
+
+    <!--  
+    <RelativeLayout
+        android:id="@+id/cloud_area1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ControlLayout1">
+        
+		<LinearLayout android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:gravity="center">
+            <Button
+                android:id="@+id/start_ctrl1"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_ctrl" />
+
+            <Button
+                android:id="@+id/stop_ctrl1"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/start_ctrl"
+                android:text="@string/stop_ctrl" />
+        </LinearLayout>
+    </RelativeLayout>
+    -->
+	</RelativeLayout>
+	
+</LinearLayout>

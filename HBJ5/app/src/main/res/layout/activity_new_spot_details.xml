@@ -1,0 +1,370 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:background="@drawable/new_spot_details_banner">
+        
+        <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="@dimen/tight_height_size"
+	        android:background="@android:color/transparent" 
+	        android:orientation="horizontal">
+	        <Button android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="12dp"
+	            android:layout_marginTop="8dp"
+	            android:layout_marginBottom="8dp"
+	            android:gravity="left"
+	            android:id="@+id/new_spot_details_goback"
+	            android:text="@string/goback"
+	            android:textSize="@dimen/top_tab_font_size"
+	            android:textColor="@color/white"
+	            android:background="@android:color/transparent"/>
+	        <TextView android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="8dp"
+	            android:layout_marginBottom="8dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:text="监测点信息"
+	            android:textColor="@color/white"
+	            android:textSize="@dimen/top_tab_font_size"/>
+	        <Button android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="12dp"
+	            android:layout_marginTop="8dp"
+	            android:layout_marginBottom="8dp"
+	            android:gravity="right"
+	            android:text="@string/goback"
+	            android:textSize="@dimen/top_tab_font_size"
+	            android:textColor="@color/icon_blue"
+	            android:background="@android:color/transparent"/>
+	    </LinearLayout>
+	    
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="30dp"
+         	android:layout_marginTop="2dp"
+         	android:layout_marginLeft="20dp"
+         	android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+            <ImageView android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"                
+                android:src="@drawable/jcxq_spot"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:textColor="@color/white"
+                android:text="null"
+                android:id="@+id/jcxq_tv_spot"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="30dp"
+         	android:layout_marginTop="2dp"
+         	android:layout_marginLeft="20dp"
+         	android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+            <ImageView android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"                
+                android:src="@drawable/jcxq_address"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:textColor="@color/white"
+                android:text="null"
+                android:id="@+id/jcxq_tv_address"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="30dp"
+         	android:layout_marginTop="2dp"
+         	android:layout_marginLeft="20dp"
+         	android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+            <ImageView android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"                
+                android:src="@drawable/jcxq_latlng"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:textColor="@color/white"
+                android:text="null"
+                android:id="@+id/jcxq_tv_latlng"/>
+        </LinearLayout>
+    </LinearLayout>
+        
+    <!-- 这里是普通噪声扬尘数据的面板的起始部分 -->
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/jcxq_layout_normal">
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="30dp"
+     	android:background="@color/grey"
+        android:orientation="horizontal">
+        <ImageView android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/jcxq_time"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textSize="@dimen/jcxq_text_size1"
+            android:text="null"
+            android:id="@+id/jcxq_tv_time"/>
+    </LinearLayout>
+
+    <!-- 第一横排  -->
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+        <LinearLayout android:layout_weight="1"
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="100dp">
+            <ImageView android:layout_width="@dimen/jcxq_pic_size"
+                android:layout_height="@dimen/jcxq_pic_size"
+                android:src="@drawable/jcxq_pm2_5"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:gravity="center"
+                android:text="null"
+                android:id="@+id/jcxq_tv_pm2_5"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size2"
+                android:gravity="center"
+                android:text="PM2.5(μg/m³)"
+                android:textColor="@color/icon_grey"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_weight="1"
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="100dp">
+            <ImageView android:layout_width="@dimen/jcxq_pic_size"
+                android:layout_height="@dimen/jcxq_pic_size"
+                android:src="@drawable/jcxq_pm10"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:gravity="center"
+                android:text="null"
+                android:id="@+id/jcxq_tv_pm10"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size2"
+                android:gravity="center"
+                android:text="PM10(μg/m³)"
+                android:textColor="@color/icon_grey"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_weight="1"
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="100dp">
+            <ImageView android:layout_width="@dimen/jcxq_pic_size"
+                android:layout_height="@dimen/jcxq_pic_size"
+                android:src="@drawable/jcxq_noise"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:gravity="center"
+                android:text="null"
+                android:id="@+id/jcxq_tv_noise"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size2"
+                android:gravity="center"
+                android:text="噪声(db)"
+                android:textColor="@color/icon_grey"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <!-- 第二横排  -->
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+        <LinearLayout android:layout_weight="1"
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="100dp">
+            <ImageView android:layout_width="@dimen/jcxq_pic_size"
+                android:layout_height="@dimen/jcxq_pic_size"
+                android:src="@drawable/jcxq_wind_direction"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:gravity="center"
+                android:text="null"
+                android:id="@+id/jcxq_tv_wind_direction"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size2"
+                android:gravity="center"
+                android:text="风向"
+                android:textColor="@color/icon_grey"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_weight="1"
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="100dp">
+            <ImageView android:layout_width="@dimen/jcxq_pic_size"
+                android:layout_height="@dimen/jcxq_pic_size"
+                android:src="@drawable/jcxq_wind_speed"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:gravity="center"
+                android:text="null"
+                android:id="@+id/jcxq_tv_wind_speed"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size2"
+                android:gravity="center"
+                android:text="风速(m/s)"
+                android:textColor="@color/icon_grey"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_weight="1"
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="100dp">
+            <ImageView android:layout_width="@dimen/jcxq_pic_size"
+                android:layout_height="@dimen/jcxq_pic_size"
+                android:src="@drawable/jcxq_temperature"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:gravity="center"
+                android:text="null"
+                android:id="@+id/jcxq_tv_temperature"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size2"
+                android:gravity="center"
+                android:text="温度(℃)"
+                android:textColor="@color/icon_grey"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <!-- 第三横排  -->
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+        <LinearLayout android:layout_weight="1"
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="100dp">
+            <ImageView android:layout_width="@dimen/jcxq_pic_size"
+                android:layout_height="@dimen/jcxq_pic_size"
+                android:src="@drawable/jcxq_humidity"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:gravity="center"
+                android:text="null"
+                android:id="@+id/jcxq_tv_humidity"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size2"
+                android:gravity="center"
+                android:text="湿度(%RH)"
+                android:textColor="@color/icon_grey"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_weight="1"
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="100dp">
+            <ImageView android:layout_width="@dimen/jcxq_pic_size"
+                android:layout_height="@dimen/jcxq_pic_size"
+                android:src="@drawable/jcxq_pm2_5"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size1"
+                android:gravity="center"
+                android:text="null"
+                android:id="@+id/jcxq_tv_tsp"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size2"
+                android:gravity="center"
+                android:text="TSP(mg/m³)"
+                android:textColor="@color/icon_grey"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_weight="1"
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/jcxq_layout_penlin"
+            android:layout_height="100dp">
+            <Button android:layout_width="@dimen/jcxq_pic_size"
+                android:layout_height="@dimen/jcxq_pic_size"
+                android:id="@+id/jcxq_bt_penlin"
+                android:background="@drawable/jcxq_penlin"/>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_margin="2dp"
+                android:textSize="@dimen/jcxq_text_size2"
+                android:gravity="center"
+                android:text="喷淋控制"
+                android:textColor="@color/icon_grey"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    </LinearLayout>
+    
+    <!-- 这里是普通噪声扬尘数据的面板的结尾部分 -->
+
+    
+</LinearLayout>

@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/icon_green"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="@dimen/tight_height_size"
+        android:background="@color/icon_green"
+        android:orientation="horizontal">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="left"
+            android:id="@+id/wuhan_yunwei_bt_goback"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="运维管理"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_tab_font_size"/>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="right"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_tab_font_size"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/wuhan_yunwei_data_type_group" android:background="#66FFFFFF" android:layout_width="fill_parent" android:layout_height="36dp" >
+        <RadioButton  android:id="@+id/wuhan_yunwei_efficient_rate" android:text="数据有效率" style="@style/spot_rank_tab_top" android:checked="true" android:textSize="16sp"/>
+        <RadioButton  android:id="@+id/wuhan_yunwei_online_rate" android:text="设备在线率" style="@style/spot_rank_tab_top" android:textSize="16sp"/>
+    </RadioGroup>
+    
+    <RadioGroup android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/wuhan_yunwei_time_type_group" android:background="@android:color/transparent" android:layout_width="340dp" android:layout_height="34dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+     
+       <RadioButton android:id="@+id/wuhan_yunwei_24hour" 
+           android:background="@drawable/wuhan_statistics_24hour_selector" 
+           android:layout_weight="1"
+           android:button="@null"
+           android:checked="true"/>
+       
+       <RadioButton android:id="@+id/wuhan_yunwei_month" 
+           android:background="@drawable/wuhan_statistics_month_selector" 
+           android:layout_weight="1"
+           android:button="@null"/>
+       
+       <RadioButton android:id="@+id/wuhan_yunwei_24hour_all" 
+           android:background="@drawable/wuhan_yunwei_24hour_all"
+           android:visibility="gone"
+           android:layout_weight="1"
+           android:button="@null"/>
+    </RadioGroup>   
+    
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <LinearLayout android:layout_width="fill_parent"
+	        	android:layout_height="300dp"
+	        	android:layout_marginTop="20dp"
+	        	android:orientation="vertical"
+	        	android:id="@+id/wuhan_statistics_result_layout1">
+	    	</LinearLayout>
+	
+	    	<LinearLayout android:layout_width="fill_parent"
+	        	android:layout_height="300dp"
+	        	android:layout_margin="0dp"
+	        	android:orientation="vertical"
+	        	android:id="@+id/wuhan_statistics_result_layout2">
+	    	</LinearLayout>
+	    	
+	    	<LinearLayout android:layout_width="fill_parent"
+	        	android:layout_height="300dp"
+	        	android:layout_margin="0dp"
+	        	android:orientation="vertical"
+	        	android:id="@+id/wuhan_statistics_result_layout3">
+	    	</LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    
+</LinearLayout>

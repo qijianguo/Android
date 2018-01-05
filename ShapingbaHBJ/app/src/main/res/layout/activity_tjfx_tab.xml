@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost android:id="@android:id/tabhost" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TabWidget android:id="@android:id/tabs" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0" />
+            <RadioGroup android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/tjfx_radio" android:background="@drawable/maintab_toolbar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton  android:id="@+id/pm10_monthly_report" android:layout_marginTop="2.0dip" android:text="@string/klwyb" android:drawableTop="@drawable/pm10_monthly_report_3x_press" style="@style/main_tab_bottom" />
+                <RadioButton  android:id="@+id/night_noise" android:layout_marginTop="2.0dip" android:text="@string/yjzs" android:drawableTop="@drawable/night_noise_3x_press" style="@style/main_tab_bottom" />
+                <RadioButton  android:id="@+id/night_noise_distribution" android:layout_marginTop="2.0dip" android:text="@string/zsfb" android:drawableTop="@drawable/night_noise_distribution_3x_press" style="@style/main_tab_bottom" />
+                <RadioButton  android:id="@+id/pm10_distribution" android:layout_marginTop="2.0dip" android:text="@string/klwfb" android:drawableTop="@drawable/pm10_distribution_3x_press" style="@style/main_tab_bottom" />
+            </RadioGroup>
+    </LinearLayout>
+</TabHost>

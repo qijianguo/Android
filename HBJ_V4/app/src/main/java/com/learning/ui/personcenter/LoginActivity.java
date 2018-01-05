@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.learning.R;
 import com.learning.presenter.personcenter.ILoginView;
@@ -27,7 +28,7 @@ public class LoginActivity extends BaseActivity implements ILoginView {
     /**
      * 登录
      */
-    private Button login;
+    private ImageButton login;
 
     private LoginPresenter mUserLoginPresenter;
 
@@ -43,8 +44,8 @@ public class LoginActivity extends BaseActivity implements ILoginView {
     @Override
     public void initViews() {
         userName = (EditText) findViewById(R.id.username);
-        password = (EditText) findViewById(R.id.passowrd);
-        login = (Button) findViewById(R.id.login);
+        password = (EditText) findViewById(R.id.password);
+        login = (ImageButton) findViewById(R.id.login);
     }
 
     @Override
@@ -59,8 +60,6 @@ public class LoginActivity extends BaseActivity implements ILoginView {
 
     @Override
     public void setHeader() {
-        super.setHeader();
-        title.setText("登录");
     }
 
     @Override

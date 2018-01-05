@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/wuhan_login_bg"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/login_center"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/username"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingBottom="0dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:textColor="@color/icon_green"
+        android:textColorHint="@color/icon_green"
+        android:textSize="@dimen/login_textsize" />
+
+    <CheckBox
+        android:id="@+id/rem_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/jizhumima"
+        android:textColor="@color/icon_green" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/password"
+        android:layout_below="@+id/rem_pwd"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/login_bt_border"
+        android:text="@string/bt_login"
+        android:textColor="@color/icon_green"
+        android:textSize="@dimen/login_button_textsize" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="237dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/login_center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/user_name"
+        android:inputType="none"
+        android:paddingBottom="0dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:textColor="@color/icon_green"
+        android:textColorHint="@color/icon_green"
+        android:textSize="@dimen/login_textsize" />
+
+</RelativeLayout>

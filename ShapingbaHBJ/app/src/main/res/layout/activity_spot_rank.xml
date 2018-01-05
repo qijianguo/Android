@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/spot_rank_bg"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="@dimen/tight_height_size"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginLeft="12dp"
+            android:gravity="left|center_vertical"
+            android:id="@+id/spot_rank_goback"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="      重庆"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_tab_font_size"/>
+        <RelativeLayout android:layout_width="100dp"
+            android:layout_height="42dp">
+            <Spinner android:layout_width="100dp"
+	            android:layout_marginTop="4dp"
+	            android:layout_height="36dp"
+	            android:gravity="end"
+	            android:id="@+id/spot_rank_spinner"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:gravity="center_horizontal|top"
+        android:textColor="@color/white"
+        android:id="@+id/spot_rank_tv_title"/>
+    
+    <RadioGroup android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/spot_rank_radio_group_time" android:background="@android:color/transparent" android:layout_width="342dp" android:layout_height="36dp">
+        
+        <RadioButton android:id="@+id/spot_rank_radio_hour" 
+            android:background="@drawable/spot_rank_hour_selector" 
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"/>
+        
+        <RadioButton android:id="@+id/spot_rank_radio_day" 
+            android:background="@drawable/spot_rank_day_selector" 
+            android:layout_weight="1"
+            android:button="@null"/>
+        
+        <RadioButton android:id="@+id/spot_rank_radio_month" 
+            android:background="@drawable/spot_rank_month_selector" 
+            android:layout_weight="1"
+            android:button="@null"/>
+        
+    </RadioGroup>
+    
+    <RadioGroup android:visibility="gone" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/spot_rank_radio_group_rank" android:background="#66FFFFFF" android:layout_width="fill_parent" android:layout_height="36dp" android:layout_marginTop="10dp">
+        <RadioButton  android:id="@+id/spot_rank_radio_all_spot" android:text="全市排名" style="@style/spot_rank_tab_top" android:checked="true" android:textSize="16sp"/>
+        <RadioButton  android:id="@+id/spot_rank_radio_district" android:text="各区排名" style="@style/spot_rank_tab_top" android:textSize="16sp"/>
+        <RadioButton  android:id="@+id/spot_rank_radio_dis_spot" android:text="区内排名" style="@style/spot_rank_tab_top" android:textSize="16sp"/>
+    </RadioGroup>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#5AB56A">
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="排名"/>
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="区名"/>
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:id="@+id/spot_rank_tv_change_item"
+            android:text="监测点"/>
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:id="@+id/spot_rank_layout_pm10"
+            android:orientation="horizontal">
+            <TextView android:layout_width="70dp"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:textSize="14sp"
+	            android:text="PM10浓度\n(μg/m³)"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:id="@+id/spot_rank_tv_arrow"
+                android:background="@drawable/spot_rank_z_to_a"/>
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ListView android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:id="@+id/spot_rank_list_view">
+        </ListView>
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true">
+            <ImageView android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/spot_rank_provider"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

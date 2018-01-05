@@ -1,0 +1,303 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wuhan_main_bg"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="@dimen/tight_height_size"
+        android:background="@android:color/transparent" 
+        android:orientation="horizontal">
+        <LinearLayout android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start">
+	        <Button android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="12dp"
+	            android:layout_marginTop="8dp"
+	            android:layout_marginBottom="8dp"
+	            android:gravity="left"
+	            android:text=""
+	            android:textSize="@dimen/top_tab_font_size"
+	            android:textColor="@color/white"
+	            android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="重庆"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_tab_font_size"/>
+        <LinearLayout android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+            <Button android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:layout_marginTop="8dp"
+	            android:layout_marginRight="8dp"
+	            android:gravity="end"
+	            android:id="@+id/wuhan_main_bt_menu"
+	            android:textSize="@dimen/top_tab_font_size"
+	            android:background="@drawable/show_menu"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="20dp"
+       	android:gravity="center"
+        android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+	        android:layout_height="30dp"
+	        android:gravity="center"
+	        android:textColor="@color/white"
+	        android:textSize="16sp"
+	        android:text="0000-00-00 00:00:00"
+	        android:id="@+id/wuhan_main_tv_update_time"/>
+        <Button android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/wuhan_main_refresh"
+            android:id="@+id/wuhan_main_bt_refresh"/>
+    </LinearLayout>
+    
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:text="空气质量指数"/>
+    
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="-10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:text="0"
+        android:id="@+id/wuhan_main_tv_aqi"/>
+    
+    
+    <TextView android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/aqi_50"
+        android:id="@+id/wuhan_main_tv_aqi_rank"/>
+    
+    <!-- 第一行 pm10 温度 天气 -->
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+        
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@drawable/wuhan_main_rectangular2"
+            android:orientation="vertical">
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="20dp"
+		        android:layout_marginTop="10dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="13sp"
+		        android:text="PM10(小时均值)"/>
+            <ImageView android:layout_width="29dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/wuhan_main_pm10"/>
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="30dp"
+		        android:layout_marginTop="5dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="20sp"
+		        android:text="0"
+		        android:id="@+id/wuhan_main_tv_pm10"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@drawable/wuhan_main_rectangular2"
+            android:orientation="vertical">
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="20dp"
+		        android:layout_marginTop="10dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="13sp"
+		        android:text="温度(℃)"/>
+            <ImageView android:layout_width="18dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/wuhan_main_temperature"/>
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="30dp"
+		        android:layout_marginTop="5dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="20sp"
+		        android:text="0"
+		        android:id="@+id/wuhan_main_tv_temperature"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:background="@drawable/wuhan_main_rectangular2"
+            android:orientation="vertical">
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="20dp"
+		        android:layout_marginTop="10dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="13sp"
+		        android:text="天气"/>
+            <ImageView android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:id="@+id/wuhan_main_img_weather"
+                android:src="@drawable/weather_qin"/>
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="30dp"
+		        android:layout_marginTop="5dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="20sp"
+		        android:text="0"
+		        android:id="@+id/wuhan_main_tv_weather"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- 第二行 pm10 日均值  月均值 -->
+    <LinearLayout android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/wuhan_main_rectangular2"
+        android:orientation="horizontal">
+        
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="40dp"
+		        android:layout_marginTop="20dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="15sp"
+		        android:text="PM10\n(μg/m³)"/>
+        </LinearLayout>
+        
+        <com.adc.view.DashedLineView android:layout_width="0.5dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+        
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="30dp"
+		        android:layout_marginTop="0dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="13sp"
+		        android:text="日均值（最新）"/>
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="30dp"
+		        android:layout_marginTop="0dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="13sp"
+		        android:text="0000-00-00"
+		        android:id="@+id/wuhan_main_tv_date1"/>
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="30dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="20sp"
+		        android:text="0"
+		        android:id="@+id/wuhan_main_tv_latest_pm10"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+             <TextView android:layout_width="fill_parent"
+		        android:layout_height="30dp"
+		        android:layout_marginTop="0dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="13sp"
+		        android:text="月均值（本月）"/>
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="30dp"
+		        android:layout_marginTop="0dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="13sp"
+		        android:text="0000-00-00"
+		        android:id="@+id/wuhan_main_tv_date2"/>
+            <TextView android:layout_width="fill_parent"
+		        android:layout_height="30dp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        android:textSize="20sp"
+		        android:text="0"
+		        android:id="@+id/wuhan_main_tv_last_month_pm10"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <Button android:layout_width="100dp"
+                android:layout_height="121dp"
+                android:background="@drawable/gongdiyangchen"
+                android:id="@+id/wuhan_main_bt_gongdi"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <Button android:layout_width="100dp"
+                android:layout_height="121dp"
+                android:background="@drawable/daoluyangchen"
+                android:id="@+id/wuhan_main_bt_daolu"/>
+        </LinearLayout>
+    </LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

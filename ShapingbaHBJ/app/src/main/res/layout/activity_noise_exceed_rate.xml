@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="@dimen/tight_height_size"
+        android:background="@color/icon_blue"
+        android:orientation="horizontal">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="left"
+            android:id="@+id/noise_exceed_rate_goback"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/zaoshengchaobiaolv"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_tab_font_size"/>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="right"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/icon_blue"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+        <TextView android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/xuanzekaishiriqi"/>
+        <EditText android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:hint="@string/kaishiriqi"
+        	android:textSize="16sp"
+        	android:id="@+id/noise_exceed_rate_start_time"/>
+        <Button android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="25dp"
+            android:text="@string/query"
+        	android:textColor="@color/white"
+        	android:textSize="@dimen/login_button_textsize"
+        	android:id="@+id/noise_exceed_rate_query"
+        	android:background="@drawable/login_bt_border"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+        <TextView android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/xuanzejieshuriqi"/>
+        <EditText android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:hint="@string/jieshuriqi"
+        	android:textSize="16sp"
+        	android:id="@+id/noise_exceed_rate_end_time"/>
+    </LinearLayout>
+
+    <RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/noise_exceed_rate_radio" android:background="@drawable/maintab_toolbar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton  android:id="@+id/ned_allday" android:layout_marginTop="2.0dip" android:text="@string/quantian" style="@style/main_tab_bottom" android:checked="true" android:textSize="16sp"/>
+        <RadioButton  android:id="@+id/ned_daytime" android:layout_marginTop="2.0dip" android:text="@string/baitian" style="@style/main_tab_bottom" android:textSize="16sp"/>
+        <RadioButton  android:id="@+id/ned_nighttime" android:layout_marginTop="2.0dip" android:text="@string/yejian" style="@style/main_tab_bottom" android:textSize="16sp"/>
+    </RadioGroup>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/noise_exceed_rate_layout"/>
+    
+</LinearLayout>

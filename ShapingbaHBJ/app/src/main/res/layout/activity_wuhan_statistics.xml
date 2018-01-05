@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="@dimen/tight_height_size"
+        android:background="@color/icon_green"
+        android:orientation="horizontal">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="left"
+            android:id="@+id/wuhan_statistics_bt_goback"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="统计分析"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_tab_font_size"/>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="right"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_tab_font_size"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@color/icon_green">
+        
+       <RadioGroup android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/wuhan_statistics_group" android:background="@android:color/transparent" android:layout_width="340dp" android:layout_height="34dp">
+      
+	       <RadioButton android:id="@+id/wuhan_statistics_24hour" 
+	           android:background="@drawable/wuhan_statistics_24hour_selector" 
+	           android:layout_weight="1"
+	           android:button="@null"
+	           android:checked="true"/>
+	       
+	       <RadioButton android:id="@+id/wuhan_statistics_month" 
+	           android:background="@drawable/wuhan_statistics_month_selector" 
+	           android:layout_weight="1"
+	           android:button="@null"/>
+	       
+	   </RadioGroup>
+		   
+    </LinearLayout>
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textColor="@color/icon_green"
+        android:textSize="18sp"
+        android:text="PM10浓度超标率对比(%)"/>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/wuhan_statistics_result_layout"></LinearLayout>
+</LinearLayout>

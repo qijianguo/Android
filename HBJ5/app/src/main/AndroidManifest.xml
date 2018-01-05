@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.adc.hbj5"
+    android:versionCode="11"
+    android:versionName="3.5" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.SET_ORIENTATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_qly"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="0086b27101599f102817810feff5e05c" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name=".MainTabActivity"
+            android:label="@string/title_activity_main_tab" >
+        </activity>
+        <activity
+            android:name=".HxdbActivity"
+            android:label="@string/title_activity_hxdb" >
+        </activity>
+        <activity
+            android:name=".JcxqActivity"
+            android:label="@string/title_activity_jcxq" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.TjfxActivity"
+            android:label="@string/title_activity_tjfx" >
+        </activity>
+        <activity
+            android:name=".SetupActivity"
+            android:label="@string/title_activity_setup" >
+        </activity>
+        <activity
+            android:name=".MapOverviewActivity"
+            android:label="@string/title_activity_map_overview" >
+        </activity>
+        <activity
+            android:name=".HxdbTabActivity"
+            android:label="@string/title_activity_hxdb_tab" >
+        </activity>
+        <activity
+            android:name=".DataContrastActivity"
+            android:label="@string/title_activity_data_contrast" >
+        </activity>
+        <activity
+            android:name=".CurveContrastActivity"
+            android:label="@string/title_activity_curve_contrast" >
+        </activity>
+        <activity android:name="com.adc.oldactivity.SpotDetailsActivity" >
+        </activity>
+        <activity
+            android:name=".SpotInfoTabActivity"
+            android:label="@string/title_activity_spot_info_tab" >
+        </activity>
+        <activity
+            android:name=".CurveChangeActivity"
+            android:label="@string/title_activity_curve_change" >
+        </activity>
+        <activity
+            android:name="com.adc.oldactivity.CapturePhotoActivity"
+            android:label="@string/title_activity_capture_photo" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.TjfxTabActivity"
+            android:label="@string/title_activity_tjfx_tab" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.Pm10MonthlyReportActivity"
+            android:label="@string/title_activity_pm10_monthly_report" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.NightNoiseActivity"
+            android:label="@string/title_activity_night_noise" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.NoiseExceedRateActivity"
+            android:label="@string/title_activity_night_noise_distribution" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.Pm10DistributionActivity"
+            android:label="@string/title_activity_pm10_distribution" >
+        </activity>
+        <activity
+            android:name="com.adc.oldactivity.OldVideoActivity"
+            android:label="@string/title_activity_video" >
+        </activity>
+        <activity
+            android:name="com.adc.air.KqzlActivity"
+            android:label="@string/title_activity_kqzl" >
+        </activity>
+        <activity
+            android:name="com.adc.pollutionsource.ZdwryActivity"
+            android:label="@string/title_activity_zdwry" >
+        </activity>
+        <activity
+            android:name="com.adc.air.AirConditionTestingStationDetailsActivity"
+            android:label="@string/title_activity_station_details"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity
+            android:name="com.adc.pollutionsource.WryDetailsActivity"
+            android:label="@string/title_activity_wry_details"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity android:name="com.adc.live.LiveActivity" >
+        </activity>
+        <activity android:name="com.adc.playback.PlayBackActivity" >
+        </activity>
+        <activity
+            android:name="com.adc.surfacewater.SurfaceWaterTabActivity"
+            android:label="@string/title_activity_surface_water_tab" >
+        </activity>
+        <activity
+            android:name="com.adc.surfacewater.SurfaceWaterMapActivity"
+            android:label="@string/title_activity_surface_water_map" >
+        </activity>
+        <activity
+            android:name="com.adc.surfacewater.SurfaceWaterDetailsActivity"
+            android:label="@string/title_activity_surface_water_details" >
+        </activity>
+        <activity
+            android:name="com.adc.surfacewater.SurfaceWaterCurveChangeActivity"
+            android:label="@string/title_activity_surface_water_curve" >
+        </activity>
+        <activity
+            android:name="com.adc.sewage.SewageTabActivity"
+            android:label="@string/title_activity_sewage_tab" >
+        </activity>
+        <activity
+            android:name="com.adc.sewage.SewageMapActivity"
+            android:label="@string/title_activity_sewage_map" >
+        </activity>
+        <activity
+            android:name="com.adc.sewage.SewageDetailsActivity"
+            android:label="@string/title_activity_sewage_details" >
+        </activity>
+        <activity
+            android:name="com.adc.sewage.SewageCurveActivity"
+            android:label="@string/title_activity_sewage_curve" >
+        </activity>
+        <activity
+            android:name=".SpotVideoTabActivity"
+            android:label="@string/title_activity_spot_video_tab" >
+        </activity>
+        <activity
+            android:name=".VideoLiveActivity"
+            android:label="@string/title_activity_video_live" >
+        </activity>
+        <activity
+            android:name=".VideoPlaybackActivity"
+            android:label="@string/title_activity_video_playback" >
+        </activity>
+        <activity
+            android:name=".VideoCaptureActivity"
+            android:label="@string/title_activity_video_capture" >
+        </activity>
+        <activity
+            android:name=".ZJBJMainActivity"
+            android:label="@string/title_activity_wuhan_main" >
+        </activity>
+        <activity
+            android:name=".NewSpotDetailsActivity"
+            android:label="@string/title_activity_new_spot_details" >
+        </activity>
+        <activity
+            android:name=".NewSpotPenlinActivity"
+            android:label="@string/title_activity_new_spot_penlin" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.Pm10ConcentrationRankActivity"
+            android:label="@string/title_activity_pm10_concentration_rank" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.Pm10HourlyMeanDistributionActivity"
+            android:label="@string/title_activity_pm10_hourly_mean_distribution" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.SurfaceWaterDataEffectiveRateRankActivity"
+            android:label="@string/title_activity_surface_water_data_effective_rate_rank" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.SurfaceWaterOverproofTimeRankActivity"
+            android:label="@string/title_activity_surface_water_overproof_time_rank" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.SurfaceWaterMajorPollutionSourceProportionActivity"
+            android:label="@string/title_activity_surface_water_major_pollution_source_proportion" >
+        </activity>
+        <activity
+            android:name="com.adc.surfacewater.SurfaceWaterCurveContrastActivity"
+            android:label="@string/title_activity_surface_water_curve_contrast" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.Pm10HourlyMeanOverproofRankActivity"
+            android:label="@string/title_activity_pm10_hourly_mean_overproof_rank" >
+        </activity>
+    </application>
+
+</manifest>

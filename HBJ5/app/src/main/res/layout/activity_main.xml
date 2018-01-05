@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/main_picture_3x"
+    android:id="@+id/activity_main_layout"
+    tools:context="com.adc.hbj5.MainActivity" >
+
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/back_3x"
+        android:id="@+id/bt_back_to_login"/>
+    
+    <LinearLayout android:layout_height="100dp"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/chongqin_group_layout2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+        <LinearLayout android:layout_height="wrap_content"
+        	android:layout_width="wrap_content"
+        	android:orientation="horizontal"
+        	android:layout_gravity="center_horizontal">
+    		<Button android:layout_width="205dp"
+        		android:layout_height="100dp"
+        		android:background="@drawable/dibiaoshui_3x"
+        		android:id="@+id/bt_main_dibiaoshui"/>
+        	<Button android:layout_width="100dp"
+            	android:layout_height="100dp"
+            	android:layout_marginLeft="5dp"
+            	android:background="@drawable/wushuichulichang_3x"
+            	android:id="@+id/bt_main_wushuichulichang"/>        
+        </LinearLayout>
+       
+    </LinearLayout>
+    
+    <LinearLayout android:layout_height="205dp"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/chongqin_group_layout1"
+        android:layout_above="@id/chongqin_group_layout2"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/bt_main_zaosheng"
+                android:layout_width="100dp"
+                android:layout_height="205dp"
+                android:background="@drawable/zaosheng_3x" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/bt_main_yangchen"
+                    android:layout_width="205dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/yangchen_3x" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/bt_main_kongqizhiliang"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/kongqizhiliang_3x" />
+
+                    <Button
+                        android:id="@+id/bt_main_zhongdianwuranyuan"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/zhongdianwuranyuan_3x" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="205dp"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/jinan_group_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/bt_main_zaosheng_jn"
+                android:layout_width="100dp"
+                android:layout_height="205dp"
+                android:background="@drawable/zaosheng_3x" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/bt_main_yangchen_jn"
+                    android:layout_width="205dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/yangchen_3x" />
+
+                <Button
+                    android:id="@+id/bt_main_kongqizhiliang_jn"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="205dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/kongqizhiliang2_3x" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+</RelativeLayout>

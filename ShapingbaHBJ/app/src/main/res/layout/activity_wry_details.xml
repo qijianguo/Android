@@ -1,0 +1,213 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/station_info_bg"
+    android:id="@+id/wry_details_layout"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView android:layout_width="fill_parent"
+            android:layout_height="@dimen/tight_height_size"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/wuranyuanxiangqing"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:id="@+id/wry_name" />
+    
+    <LinearLayout android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@drawable/key_pollution_qualified_bar"
+        android:id="@+id/key_pollution_waste_water_layout">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/key_pollution_waste_water"
+            android:textColor="@color/white"
+            android:textSize="@dimen/key_pollution_bar_font_size"
+            android:id="@+id/key_pollution_waste_water_result"/>
+    </LinearLayout>
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_pollution_info_font_size"
+        android:id="@+id/key_pollution_waste_water_content"/>
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_pollution_info_font_size"
+        android:id="@+id/key_pollution_waste_water_record_time"/>
+    
+    
+    <LinearLayout android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@drawable/key_pollution_qualified_bar"
+        android:id="@+id/key_pollution_exhaust_gas_layout">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/key_pollution_exhaust_gas"
+            android:textColor="@color/white"
+            android:textSize="@dimen/key_pollution_bar_font_size"
+            android:id="@+id/key_pollution_exhaust_gas_result"/>
+    </LinearLayout>
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_pollution_info_font_size"
+        android:id="@+id/key_pollution_exhaust_gas_content"/>
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_pollution_info_font_size"
+        android:id="@+id/key_pollution_exhaust_gas_record_time"/>
+    
+    <LinearLayout android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@drawable/key_pollution_qualified_bar"
+        android:id="@+id/key_pollution_noise_layout">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/key_pollution_noise"
+            android:textColor="@color/white"
+            android:textSize="@dimen/key_pollution_bar_font_size"
+            android:id="@+id/key_pollution_noise_result"/>
+    </LinearLayout>
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_pollution_info_font_size"
+        android:id="@+id/key_pollution_noise_content"/>
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_pollution_info_font_size"
+        android:id="@+id/key_pollution_noise_record_time"/>
+    
+
+    <!-- 
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	       	android:gravity="center"
+	        android:background="@drawable/designed_transparent_circle"
+	        android:textColor="@color/wry_green"
+	        android:textSize="20sp"
+	        android:text="全部达标"/>
+	</LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:text="@string/shouyaowuranwuleixing" />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:id="@+id/major_pollutant_name" />
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+        <TextView
+        	android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:gravity="end"
+        	android:textColor="@color/white"
+        	android:textSize="@dimen/station_info_font_size"
+        	android:text="@string/jiancexiangmu" />
+        <TextView
+            android:layout_height="wrap_content"
+        	android:layout_width="150dp"
+        	android:layout_marginLeft="20dp"
+        	android:layout_gravity="start"
+        	android:textColor="@color/white"
+        	android:textSize="@dimen/station_info_font_size"
+        	android:id="@+id/test_item" />
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+        <TextView
+        	android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	android:gravity="end"
+        	android:textColor="@color/white"
+        	android:textSize="@dimen/station_info_font_size"
+        	android:text="@string/jianceshijian" />
+        <TextView
+            android:layout_height="wrap_content"
+        	android:layout_width="150dp"
+        	android:layout_marginLeft="20dp"
+        	android:layout_gravity="start"
+        	android:textColor="@color/white"
+        	android:textSize="@dimen/station_info_font_size"
+        	android:id="@+id/test_time" />
+    </LinearLayout>
+	-->
+	
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textColor="@color/white"
+        	android:textSize="@dimen/station_info_font_size"
+        	android:text="@string/shujulaiyuan" />
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="30dp"></LinearLayout>
+</LinearLayout>

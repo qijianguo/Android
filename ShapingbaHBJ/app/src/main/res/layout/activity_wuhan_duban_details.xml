@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/spot_rank_bg"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="@dimen/tight_height_size"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginLeft="12dp"
+            android:gravity="left|center_vertical"
+            android:id="@+id/duban_details_goback"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:id="@+id/duban_details_tv_title"
+            android:text="武汉"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_tab_font_size"/>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginRight="12dp"
+            android:text="@string/goback"
+            android:textSize="@dimen/top_tab_font_size"
+            android:textColor="@color/icon_green"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#5AB56A">
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="序列"/>
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="处理人"/>
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="处理时间"/>
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:id="@+id/duban_details_layout_pm10"
+            android:orientation="horizontal">
+            <TextView android:layout_width="70dp"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:textSize="16sp"
+	            android:text="处理状态"/>
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ListView android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:id="@+id/duban_details_list_view">
+        </ListView>
+    </RelativeLayout>
+</LinearLayout>

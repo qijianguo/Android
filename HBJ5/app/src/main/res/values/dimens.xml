@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="bottom_tab_padding_drawable">1.0dip</dimen>
+    <dimen name="bottom_tab_padding_up">5.0dip</dimen>
+    <dimen name="bottom_tab_font_size">12.0sp</dimen>
+    <dimen name="tjfx_tab_font_size">10.0sp</dimen>
+    <dimen name="top_tab_font_size">18sp</dimen>
+	<dimen name="station_info_font_size">14sp</dimen>
+	<dimen name="photo_info_font_size">16sp</dimen>
+	<dimen name="tight_height_size">42dp</dimen>
+	<dimen name="live_button_font_size">15sp</dimen>
+	<dimen name="key_pollution_bar_font_size">16sp</dimen>
+	<dimen name="key_pollution_info_font_size">14sp</dimen>
+	<dimen name="jcxq_text_size1">16sp</dimen>
+	<dimen name="jcxq_text_size2">15sp</dimen>
+	<dimen name="jcxq_pic_size">50dp</dimen>
+</resources>

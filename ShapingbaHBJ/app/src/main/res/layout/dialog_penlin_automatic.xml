@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="开关设置:"/>
+	    <RadioGroup android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:id="@+id/penlin_dialog_automatic_radiogp">
+	        <RadioButton android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:checked="true"
+	            android:text="开"
+	            android:id="@+id/penlin_dialog_automatic_radiobt_open"/>
+	        <RadioButton android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="关"
+	            android:id="@+id/penlin_dialog_automatic_radiobt_close"/>
+	    </RadioGroup>
+    </LinearLayout>
+    
+	<LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="13sp"
+            android:text="阈值(mg/m³):"/>
+	    <EditText
+	        android:id="@+id/penlin_dialog_automatic_threshold"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="13sp"/>
+    </LinearLayout>
+</LinearLayout>

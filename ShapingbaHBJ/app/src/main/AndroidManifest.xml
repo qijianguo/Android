@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.adc.shapingba"
+    android:versionCode="6"
+    android:versionName="3.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.SET_ORIENTATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_qly"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="f9a3ac9b8bccb6d39de5f7ecf71f0270" />
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name=".MainTabActivity"
+            android:label="@string/title_activity_main_tab" >
+        </activity>
+        <activity
+            android:name=".HxdbActivity"
+            android:label="@string/title_activity_hxdb" >
+        </activity>
+        <activity
+            android:name=".JcxqActivity"
+            android:label="@string/title_activity_jcxq" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.TjfxActivity"
+            android:label="@string/title_activity_tjfx" >
+        </activity>
+        <activity
+            android:name=".SetupActivity"
+            android:label="@string/title_activity_setup" >
+        </activity>
+        <activity
+            android:name=".MapOverviewActivity"
+            android:label="@string/title_activity_map_overview" >
+        </activity>
+        <activity
+            android:name=".HxdbTabActivity"
+            android:label="@string/title_activity_hxdb_tab" >
+        </activity>
+        <activity
+            android:name=".DataContrastActivity"
+            android:label="@string/title_activity_data_contrast" >
+        </activity>
+        <activity
+            android:name=".CurveContrastActivity"
+            android:label="@string/title_activity_curve_contrast" >
+        </activity>
+        <activity
+            android:name=".SpotInfoTabActivity"
+            android:label="@string/title_activity_spot_info_tab" >
+        </activity>
+        <activity
+            android:name=".CurveChangeActivity"
+            android:label="@string/title_activity_curve_change" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.TjfxTabActivity"
+            android:label="@string/title_activity_tjfx_tab" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.Pm10MonthlyReportActivity"
+            android:label="@string/title_activity_pm10_monthly_report" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.NightNoiseActivity"
+            android:label="@string/title_activity_night_noise" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.NoiseExceedRateActivity"
+            android:label="@string/title_activity_night_noise_distribution" >
+        </activity>
+        <activity
+            android:name="com.adc.statistics.Pm10DistributionActivity"
+            android:label="@string/title_activity_pm10_distribution" >
+        </activity>
+        <activity
+            android:name=".SpotVideoActivity"
+            android:label="@string/title_activity_spot_video" >
+        </activity>
+        <activity
+            android:name=".SpotVideoTabActivity"
+            android:label="@string/title_activity_spot_video_tab" >
+        </activity>
+        <activity
+            android:name=".VideoLiveActivity"
+            android:label="@string/title_activity_video_live" >
+        </activity>
+        <activity
+            android:name=".VideoPlaybackActivity"
+            android:label="@string/title_activity_video_playback" >
+        </activity>
+        <activity
+            android:name=".VideoCaptureActivity"
+            android:label="@string/title_activity_video_capture" >
+        </activity>
+        <activity
+            android:name=".WuhanMainActivity"
+            android:label="@string/title_activity_wuhan_main" >
+        </activity>
+        <activity
+            android:name=".NewSpotDetailsActivity"
+            android:label="@string/title_activity_new_spot_details" >
+        </activity>
+        <activity
+            android:name=".SpotRankActivity"
+            android:label="@string/title_activity_spot_rank" >
+        </activity>
+        <activity
+            android:name=".RoadRankActivity"
+            android:label="@string/title_activity_road_rank" >
+        </activity>
+        <activity
+            android:name=".HomepageActivity"
+            android:label="@string/title_activity_homepage" >
+        </activity>
+        <activity
+            android:name=".TestActivity"
+            android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name=".WuhanCsiteMapActivity"
+            android:label="@string/title_activity_wuhan_csite_map" >
+        </activity>
+        <activity
+            android:name=".WuhanStatisticsActivity"
+            android:label="@string/title_activity_wuhan_statistics" >
+        </activity>
+        <activity
+            android:name=".WuhanYunweiActivity"
+            android:label="@string/title_activity_wuhan_yunwei" >
+        </activity>
+        <activity
+            android:name=".WuhanStationMapActivity"
+            android:label="@string/title_activity_wuhan_station_map" >
+        </activity>
+        <activity
+            android:name=".ZurveChangeActivity"
+            android:label="@string/title_activity_zurve_change" >
+        </activity>
+        <activity
+            android:name=".WuhanYunweiBaogaoActivity"
+            android:label="@string/title_activity_wuhan_yunwei_baogao"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".WuhanDubanActivity"
+            android:label="@string/title_activity_wuhan_duban"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".WuhanDubanDetailsActivity"
+            android:label="@string/title_activity_wuhan_duban_details" >
+        </activity>
+        <activity
+            android:name=".WuhanComplaintActivity"
+            android:label="@string/title_activity_wuhan_complaint"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".WuhanComplaintDetailsActivity"
+            android:label="@string/title_activity_wuhan_complaint_details" >
+        </activity>
+        <activity
+            android:name=".NewSpotPenlinActivity"
+            android:label="@string/title_activity_new_spot_penlin" >
+        </activity>
+    </application>
+
+</manifest>
